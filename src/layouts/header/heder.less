@@ -1,0 +1,84 @@
+.head {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 60px;
+  background-color: #f3f7fa;
+  box-sizing: border-box;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+  -khtml-opacity: 0.9;
+}
+.head-ul {
+  display: flex;
+  align-items: center;
+
+  li {
+    margin: 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .li-active {
+    color: #f00;
+  }
+}
+
+.head-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top: solid 2px #33ccff;
+    border-bottom: solid 2px #33ccff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate-logo 2s linear infinite;
+  }
+
+  &::after {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    content: '';
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-left: solid 2px #0f0;
+    border-right: solid 2px #0f0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate-logo 2s linear infinite;
+  }
+  .logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
