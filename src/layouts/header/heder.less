@@ -9,21 +9,23 @@
   width: 100%;
   height: 70px;
   padding: 0 60px;
-  background-color: #f3f7fa;
+  background-color: rgba(250, 250, 250, .9);
   box-sizing: border-box;
-  filter: alpha(opacity=90);
-  -moz-opacity: 0.9;
-  opacity: 0.9;
-  -khtml-opacity: 0.9;
 }
 .head-ul {
   display: flex;
   align-items: center;
 
   li {
-    margin: 0 30px;
-    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
     font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
   }
   .li-active {
     color: #f00;
@@ -74,11 +76,62 @@
   }
 }
 
+// 子导航菜单
+.head-nav-sub {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 0 60px;
+  box-sizing: border-box;
+  background-color: rgba(250, 250, 250, .9);
+
+  .sub-li {
+    height: auto;
+    line-height: normal;
+  }
+}
+.head-nav-sub-inner {
+  width: 100%;
+}
+.head-nav-sub-a {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 29px;
+  line-height: 29px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+.head-nav-show {
+  display: block;
+  animation: topin .3s;
+  -webkit-animation: topin .3s;
+}
+
 @keyframes rotate-logo {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes topin {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
