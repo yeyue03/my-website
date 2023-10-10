@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './index.css'
 
 const Square = (props) => {
-  console.log("== 变更");
   return (
     <div className="square-box" onClick={() => props.clickSquare(props.index)}>
       { props.content }
@@ -28,7 +27,7 @@ const Tictactoe = () => {
   const clickSquare = (index) => {
     const _arr = JSON.parse(JSON.stringify(squareList));
 
-    _arr[index]['content'] = times % 2 == 0 ? 'X' : 'O';
+    _arr[index]['content'] = times % 2 === 0 ? 'X' : 'O';
     setSquareList(_arr);
     setTimes(times + 1);
     // judgeWinner();
@@ -49,7 +48,7 @@ const Tictactoe = () => {
     for (const item of exampleList) {
       const [a, b, c] = item;
       const first = squareList[a]['content'];
-      if (first && first == squareList[b]['content'] && first == squareList[c]['content']) {
+      if (first && first === squareList[b]['content'] && first === squareList[c]['content']) {
         console.log(first + '胜利');
         break;
       }

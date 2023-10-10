@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
 const HeadNavSub = (props) => {
   const [isOverNav, setIsOverNav] = React.useState(false);
@@ -9,7 +10,8 @@ const HeadNavSub = (props) => {
       <div className="head-nav-sub-inner">
         <ul className="head-ul">
           <li className='sub-li'>
-            <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单一</a>
+            <Link className="head-nav-sub-a" to="/home">首页</Link>
+            <Link className="head-nav-sub-a" to="/tictactoe">井字棋</Link>
             <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单二</a>
             <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单三</a>
           </li>
