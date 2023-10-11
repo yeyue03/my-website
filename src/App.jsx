@@ -10,8 +10,8 @@ const router = createBrowserRouter([
     Component: Layouts,
     children: [
       {
-        path: '/home',
-        Component: lazy(() => import('./views/home'))
+        path: '/about',
+        Component: lazy(() => import('./views/about'))
       },
       {
         path: '/tictactoe',
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/',
-        element: <Navigate to="/home" />
+        element: <Navigate to="/about" />
       }
     ]
   },
