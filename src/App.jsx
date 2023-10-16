@@ -1,6 +1,7 @@
 import React, { Component, lazy } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './App.css';
+import './mock';
 
 import Layouts from './layouts';
 

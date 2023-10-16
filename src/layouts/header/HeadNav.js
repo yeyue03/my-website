@@ -1,4 +1,10 @@
+import UserApi from '@/api/user/index';
+
 const HeadNav = (props) => {
+  UserApi.MenuList().then(res => {
+    console.log("=== res: ", res);
+  })
+
   return (
     <div className='head-nav' onMouseOver={() => props.setIsShowSubNav(true)} onMouseLeave={() => props.setIsShowSubNav(false)}>
       <ul className="head-ul">
