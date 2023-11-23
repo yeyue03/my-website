@@ -12,8 +12,7 @@ Mock.mock('/user/menuList', () => {
     "data": [
       {
         name: '首页',
-        path: '/home',
-        children: []
+        path: '/article',
       },
       {
         name: '常用功能',
