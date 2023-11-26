@@ -22,10 +22,10 @@ const HeadNav = (props: NavProps) => {
   }
   getMenu();
 
-  setTimeout(() => {
-    console.log("=== store: ", store.getState().user.menu);
+  // setTimeout(() => {
+  //   console.log("=== store: ", store.getState().user.menu);
     
-  }, 1000);
+  // }, 1000);
 
   return (
     <div className='head-nav' onMouseOver={() => props.setIsShowSubNav(true)} onMouseLeave={() => props.setIsShowSubNav(false)}>
