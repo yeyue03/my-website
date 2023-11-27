@@ -1,125 +1,84 @@
 import React from "react";
-import {
-  CaretUpOutlined,
-  CaretDownOutlined,
-  MessageFilled,
-  NotificationFilled,
-  StarFilled,
-  HeartFilled,
-} from "@ant-design/icons";
+import StoryCard from "./conponents/StoryCard";
 
 import "./article.less";
 
 const Article = () => {
+  const articleList = [
+    {
+      id: 1,
+      img: "https://img2.baidu.com/it/u=2626707578,2110956943&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1700845200&t=ad61e4a0285983de5955fbf6d9770bfc",
+      title: "游戏毁了这么多青少年，国家为什么不禁止未成年的青少年玩游戏呢？",
+      shortContent: `江湖潜规则：
+        房价毁掉了一大部分你不问，996毁掉了一小半你不问，公权私用毁掉了一部分你不问。
+        你问游戏，一个拯救了大部分人，使社会安定扩大就业，对社会治安做出卓越贡献，让大家有了精神寄托`,
+      voteNum: '1.4万',
+      commentNum: '155',
+    },
+    {
+      id: 2,
+      img: "",
+      title: "如何提升文笔水平、改善语句逻辑性？",
+      shortContent: `柏小陌： 一、什么是好文笔？ 所谓的好文笔，其实就是指具有良好的
+        <b data-first-child="">文学表达能力</b>，以及
+        <b>独特风格的写作方式</b>。
+        大多数人都以为，华丽的词藻是文笔，非也非也。 好文笔…`,
+      voteNum: '1 万',
+      commentNum: '249',
+    },
+    {
+      id: 3,
+      img: "https://img2.baidu.com/it/u=2626707578,2110956943&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1700845200&t=ad61e4a0285983de5955fbf6d9770bfc",
+      title: "游戏毁了这么多青少年，国家为什么不禁止未成年的青少年玩游戏呢？",
+      shortContent: `江湖潜规则：
+        房价毁掉了一大部分你不问，996毁掉了一小半你不问，公权私用毁掉了一部分你不问。
+        你问游戏，一个拯救了大部分人，使社会安定扩大就业，对社会治安做出卓越贡献，让大家有了精神寄托`,
+      voteNum: '1.4万',
+      commentNum: '155',
+    },
+    {
+      id: 4,
+      img: "",
+      title: "如何提升文笔水平、改善语句逻辑性？",
+      shortContent: `柏小陌： 一、什么是好文笔？ 所谓的好文笔，其实就是指具有良好的
+        <b data-first-child="">文学表达能力</b>，以及
+        <b>独特风格的写作方式</b>。
+        大多数人都以为，华丽的词藻是文笔，非也非也。 好文笔…`,
+      voteNum: '1 万',
+      commentNum: '249',
+    },
+    {
+      id: 5,
+      img: "https://img2.baidu.com/it/u=2626707578,2110956943&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1700845200&t=ad61e4a0285983de5955fbf6d9770bfc",
+      title: "游戏毁了这么多青少年，国家为什么不禁止未成年的青少年玩游戏呢？",
+      shortContent: `江湖潜规则：
+        房价毁掉了一大部分你不问，996毁掉了一小半你不问，公权私用毁掉了一部分你不问。
+        你问游戏，一个拯救了大部分人，使社会安定扩大就业，对社会治安做出卓越贡献，让大家有了精神寄托`,
+      voteNum: '1.4万',
+      commentNum: '155',
+    },
+    {
+      id: 6,
+      img: "",
+      title: "如何提升文笔水平、改善语句逻辑性？",
+      shortContent: `柏小陌： 一、什么是好文笔？ 所谓的好文笔，其实就是指具有良好的
+        <b data-first-child="">文学表达能力</b>，以及
+        <b>独特风格的写作方式</b>。
+        大多数人都以为，华丽的词藻是文笔，非也非也。 好文笔…`,
+      voteNum: '1 万',
+      commentNum: '249',
+    },
+  ];
+
   return (
     <main className="app-main">
       <div className="story-wrap">
         <div className="story-box">
-          <div className="story-card">
-            <h2 className="card-title">
-              游戏毁了这么多青少年，国家为什么不禁止未成年的青少年玩游戏呢？
-            </h2>
-
-            <div className="rich-content">
-              <div className="img-cover">
-                <img
-                  src="https://img2.baidu.com/it/u=2626707578,2110956943&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1700845200&t=ad61e4a0285983de5955fbf6d9770bfc"
-                  alt=""
-                />
-              </div>
-
-              <div className="rich-content-inner">
-                <div className="rich-text">
-                  江湖潜规则：
-                  房价毁掉了一大部分你不问，996毁掉了一小半你不问，公权私用毁掉了一部分你不问。
-                  你问游戏，一个拯救了大部分人，使社会安定扩大就业，对社会治安做出卓越贡献，让大家有了精神寄托
-                </div>
-                <button className="read-more">阅读全文</button>
-              </div>
-            </div>
-
-            <div className="card-actions">
-              <div>
-                <button className="vote-btn">
-                  <CaretUpOutlined />
-                  <span>赞同 1.4 万</span>
-                </button>
-
-                <button className="vote-btn vote-btn-down">
-                  <CaretDownOutlined />
-                </button>
-              </div>
-
-              <button className="actions-btn">
-                <MessageFilled />
-                <span>155 条评论</span>
-              </button>
-
-              <button className="actions-btn">
-                <NotificationFilled />
-                <span>分享</span>
-              </button>
-
-              <button className="actions-btn">
-                <StarFilled />
-                <span>收藏</span>
-              </button>
-
-              <button className="actions-btn">
-                <HeartFilled />
-                <span>喜欢</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="story-card">
-            <h2 className="card-title">如何提升文笔水平、改善语句逻辑性？</h2>
-
-            <div className="rich-content">
-              <div className="rich-content-inner">
-                <div className="rich-text">
-                  柏小陌： 一、什么是好文笔？ 所谓的好文笔，其实就是指具有良好的
-                  <b data-first-child="">文学表达能力</b>，以及
-                  <b>独特风格的写作方式</b>。
-                  大多数人都以为，华丽的词藻是文笔，非也非也。 好文笔…
-                </div>
-                <button className="read-more">阅读全文</button>
-              </div>
-            </div>
-
-            <div className="card-actions">
-              <div>
-                <button className="vote-btn">
-                  <CaretUpOutlined />
-                  <span>赞同 1 万</span>
-                </button>
-
-                <button className="vote-btn vote-btn-down">
-                  <CaretDownOutlined />
-                </button>
-              </div>
-
-              <button className="actions-btn">
-                <MessageFilled />
-                <span>249 条评论</span>
-              </button>
-
-              <button className="actions-btn">
-                <NotificationFilled />
-                <span>分享</span>
-              </button>
-
-              <button className="actions-btn">
-                <StarFilled />
-                <span>收藏</span>
-              </button>
-
-              <button className="actions-btn">
-                <HeartFilled />
-                <span>喜欢</span>
-              </button>
-            </div>
-          </div>
+          {
+            articleList.map(item => {
+              return <StoryCard {...item} key={item.id} />
+            })
+          }
         </div>
 
         <div className="right-sidebar">
@@ -129,7 +88,7 @@ const Article = () => {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                class="svg-user"
+                className="svg-user"
                 fill="currentColor"
               >
                 <path
@@ -141,13 +100,13 @@ const Article = () => {
               <span className="card-title">创作中心</span>
             </div>
 
-            <div class="nav-top">
-              <button class="nav-top-item" title="回答">
+            <div className="nav-top">
+              <button className="nav-top-item" title="回答">
                 <svg
                   width="40"
                   height="40"
                   viewBox="0 0 40 40"
-                  class="nav-icon"
+                  className="nav-icon"
                   fill="currentColor"
                 >
                   <g fill="#06F" fill-rule="evenodd">
@@ -158,15 +117,15 @@ const Article = () => {
                     ></path>
                   </g>
                 </svg>
-                <div class="nav-top-text">回答问题</div>
+                <div className="nav-top-text">回答问题</div>
               </button>
 
-              <button class="nav-top-item">
+              <button className="nav-top-item">
                 <svg
                   width="40"
                   height="40"
                   viewBox="0 0 40 40"
-                  class="nav-icon"
+                  className="nav-icon"
                   fill="none"
                 >
                   <circle
@@ -187,15 +146,15 @@ const Article = () => {
                     d="M21.133 19.424a.665.665 0 0 1 0 1.152L16.933 23a.665.665 0 0 1-.998-.576v-4.85c0-.512.554-.832.998-.576l4.2 2.425Z"
                   ></path>
                 </svg>
-                <div class="nav-top-text">发视频</div>
+                <div className="nav-top-text">发视频</div>
               </button>
 
-              <button class="nav-top-item" title="写文章">
+              <button className="nav-top-item" title="写文章" onClick={() => window.open('/write', '_blank')}>
                 <svg
                   width="40"
                   height="40"
                   viewBox="0 0 40 40"
-                  class="nav-icon"
+                  className="nav-icon"
                   fill="currentColor"
                 >
                   <g fill="none" fill-rule="evenodd">
@@ -214,15 +173,15 @@ const Article = () => {
                     ></path>
                   </g>
                 </svg>
-                <div class="nav-top-text">写文章</div>
+                <div className="nav-top-text">写文章</div>
               </button>
 
-              <button class="nav-top-item">
+              <button className="nav-top-item">
                 <svg
                   width="40"
                   height="40"
                   viewBox="0 0 40 40"
-                  class="nav-icon"
+                  className="nav-icon"
                   fill="currentColor"
                 >
                   <g fill="#26BFBF" fill-rule="evenodd">
@@ -233,7 +192,7 @@ const Article = () => {
                     ></path>
                   </g>
                 </svg>
-                <div class="nav-top-text">写想法</div>
+                <div className="nav-top-text">写想法</div>
               </button>
             </div>
             
