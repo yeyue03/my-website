@@ -52,9 +52,7 @@ function RichTextEditor(props) {
   }
 
   return (
-    <div>
-      <ReactQuill value={props.value} modules={modules} onChange={props.handleContentChange} />
-    </div>
+    <ReactQuill value={props.value} modules={modules}  style={props.style} onChange={props.handleContentChange} />
   );
 }
  
