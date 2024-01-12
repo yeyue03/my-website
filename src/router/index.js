@@ -17,6 +17,10 @@ const router = createBrowserRouter([
         Component: lazy(() => import('../views/article/write'))
       },
       {
+        path: '/moveable',
+        Component: lazy(() => import('../views/drag/moveable'))
+      },
+      {
         path: '/about',
         Component: lazy(() => import('../views/about'))
       },

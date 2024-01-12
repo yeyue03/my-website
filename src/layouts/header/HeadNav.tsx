@@ -1,8 +1,8 @@
 import React from 'react';
-import UserApi from '@/api/user/index';
-import { useAppDispatch } from '@/store';
-import { setMenu } from '@/store/user';
-import store from '@/store';
+// import UserApi from '@/api/user/index';
+// import { useAppDispatch } from '@/store';
+// import { setMenu } from '@/store/user';
+// import store from '@/store';
 
 interface NavProps {
   setIsShowSubNav: (bool: boolean) => void
@@ -10,21 +10,17 @@ interface NavProps {
 
 const HeadNav = (props: NavProps) => {
   // const [menuList, setMenuList] = useState<any>([]);
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  console.log(" 渲染 ");
-  
-
-  const getMenu = () => {
-    UserApi.MenuList().then((data: any) => {
-      dispatch(setMenu(data));
-    })
-  }
-  getMenu();
+  // const getMenu = () => {
+  //   UserApi.MenuList().then((data: any) => {
+  //     dispatch(setMenu(data));
+  //   })
+  // }
+  // getMenu();
 
   // setTimeout(() => {
   //   console.log("=== store: ", store.getState().user.menu);
-    
   // }, 1000);
 
   return (

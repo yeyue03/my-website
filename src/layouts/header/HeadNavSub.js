@@ -13,9 +13,7 @@ const HeadNavSub = (props) => {
             <Link className="head-nav-sub-a" to="/home">首页</Link>
           </li>
           <li className='sub-li'>
-            <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单一</a>
-            <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单二</a>
-            <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单三</a>
+            <Link className="head-nav-sub-a" to="/moveable">moveable</Link>
           </li>
           <li className='sub-li'>
             <a className="head-nav-sub-a" href="https://www.baidu.com/">子菜单一</a>
